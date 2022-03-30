@@ -6,7 +6,7 @@ import Confirm from "../components/Confirm";
 import RideSelector from "../components/RideSelector";
 
 const style = {
-  wrapper: `relative h-screen w-screen flex flex-col overflow-x-hidden`,
+  wrapper: `relative h-screen w-screen flex flex-col overflow-hidden`,
   main: `h-full w-screen flex-1 z-10`,
   mapContainer: `flex-1 w-full h-full`,
   rideSelectorContainer: `h-full flex flex-col`,
@@ -27,13 +27,13 @@ export default function Home() {
         <Navbar />
         <div className={style.main}>
           <Map />
-          <div className={style.rideRequestContainer}>
-            <div className={style.rideRequest}>
-              <LocationSelector />
-              <RideSelector />
-            </div>
-            <Confirm />
+        </div>
+        <div className={style.rideRequestContainer}>
+          <div className={style.rideRequest}>
+            <LocationSelector />
+            <RideSelector />
           </div>
+          <Confirm />
         </div>
       </div>
     </div>
